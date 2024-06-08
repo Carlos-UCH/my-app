@@ -18,17 +18,17 @@ const Home = ({ navigation }) => {
   return (
 
 
-    <View style={tw`flex-1 justify-around items-center`}>
+    <View style={tw`flex-1 justify-around items-center bg-black`}>
       <Image source={require("../../../assets/images/zombie.jpg")}
-        style={tw.style(tw`h-4/6 mt-59`, { aspectRatio: 1 })} />
-
-      <View style={styles.buttonStart}>
+        style={tw.style(tw`h-4/6 mb-60`, { aspectRatio: 1 })} />
 
 
-        <Text style={styles.textStart}>
-          Começar
-        </Text>
-      </View>
+        <Pressable style={styles.buttonStart} onPress={()=>navigation.navigate("Question")}>
+          <Text style={styles.textStart}>
+            Start
+          </Text>
+        </Pressable>
+
     </View>
   )
 }
@@ -38,13 +38,12 @@ export default Home
 const styles = StyleSheet.create({
 
   buttonStart: {
-    backgroundColor: '#000000',
+    backgroundColor: '#ffffff',
     padding: 10,
     borderRadius: 5,
     width: 200,
     height: 70,
-    position: 'absolute',
-    top: 110,
+    bottom: 89,
     transform: [{ rotate: '-10deg' }]
 
   },
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'textStart',
     fontSize: 30,
-    color: '#ffffff',
+    color: '#000000',
   }
 
 })
