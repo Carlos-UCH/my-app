@@ -1,11 +1,28 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import tw from "twrnc";
+import { Video } from 'expo-av';
 
 import { useFonts } from 'expo-font';
 
 
 const Home = ({ navigation }) => {
+
+  //Load Video Screen 
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleLoad = (status) => {
+    if (status.isLoaded) {
+      setVideoLoaded(true);
+    }
+  }
+
+  const navigateToVideo = () => {
+    if (videoLoaded) {
+      navigation.navigate("Video");
+    }
+  }
 
   let [fontsLoaded] = useFonts({
     'textStart': require('../../../assets/fonts/IndieFlower-Regular.ttf'),
@@ -17,17 +34,23 @@ const Home = ({ navigation }) => {
 
   return (
 
-
     <View style={tw`flex-1 justify-around items-center bg-black`}>
+      <Video
+        source={require('../../../assets/video/videoInicial.mp4')}
+        style={styles.video}
+        onPlaybackStatusUpdate={handleLoad}
+        shouldPlay={false}
+      />
+
       <Image source={require("../../../assets/images/zombie.jpg")}
         style={tw.style(tw`h-4/6 mb-60`, { aspectRatio: 1 })} />
 
 
-        <Pressable style={styles.buttonStart} onPress={()=>navigation.navigate("Question")}>
-          <Text style={styles.textStart}>
-            Start
-          </Text>
-        </Pressable>
+      <Pressable style={styles.buttonStart} disabled={!videoLoaded} onPress={navigateToVideo}>
+        <Text style={styles.textStart}>
+          {!videoLoaded ? "Esperar" : "Começar"}
+        </Text>
+      </Pressable>
 
     </View>
   )
