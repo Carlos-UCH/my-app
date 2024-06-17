@@ -6,7 +6,7 @@ import Questions from '../screens/Questions';
 import Home from '../screens/Home';
 import Video from '../screens/VideoPlayer';
 import Read from '../screens/Read';
-import DragAndDropTasks from '../screens/DragAndDropTasks';
+
 
 const Stack = createNativeStackNavigator();
 

@@ -1,35 +1,77 @@
+
 export const reactQuestions = [
     {
-        question: "What is React?",
+        question: "Qual a Lei do Resfriamento de Newton?",
         options: [
-            "A Library for building interaction interfaces",
-            "A Framework for building interfaces",
-            "A Library for building interfaces",
-            "A Framework for building interaction interfaces"
+            "dT/dt = K(T-Tm)",
+            "dT/dt = -K(T+Tm)",
+            "dT/dt = K(Tm - T)",
+            "dT/dt = K"
         ],
-        correct: "A Library for building interaction interfaces",
+        correct: "dT/dt = K(T-Tm)",
 
     },
     {
-        question: "What is JSX?",
+        question: "Essa é uma EDO ________.",
         options: [
-            "JavaScript XML",
-            "JavaScript",
-            "Java",
-            "None of the above"
+            "Homogênea",
+            "Exata",
+            "Não Exata",
+            "Separável"
         ],
-        correct: "None of the above",
+        correct: "Separável",
     },
     {
-        question: "What is the virtual DOM?",
+        question: "Qual a resolução da EDO? Dado Tm = 22,2°C.",
         options: [
-            "A virtual representation of the actual DOM",
-            "A virtual representation of a DOM",
-            "A virtual representation of a DOM with a different name",
-            "A virtual representation of the actual DOM with a different name"
+            "ln|T+22,2| = Kt + C\nT-22,2 = Ce^(kt)",
+            "ln|T-22,2| = Kt + C\nT-22,2 = Ce^(kt)",
+            "ln|T-22,2| = ln|Kt + C|\nT-22,2 = Ce^(kt)",
+            "ln|T+2,2| = ln|Kt + C|\nT-22,2 = Ce^(kt)"
         ],
-        correct: "A virtual representation of the actual DOM",
+        correct: "ln|T-22,2| = Kt + C\nT-22,2 = Ce^(kt)",
     },
+    {
+        question: "Qual o valor da constante?",
+        options: [
+            "C = 13,2",
+            "C = 19,1",
+            "C = 12,6",
+            "C = 11,6"
+        ],
+        correct: "C = 12,6",
+    },
+
+    {
+        question: "",
+        options: [
+            "Verdadeiro",
+            "Falso",
+
+        ],
+        correct: "Verdadeiro",
+    },
+    {
+        question: "Qual é o horário da morte?",
+        options: [
+            "20h 47min",
+            "21h 37min",
+            "22h 17min",
+            "23h 11min"
+        ],
+        correct: "20h 47min",
+    },
+    {
+        question: "Pode-se afirmar que:",
+        options: [
+            "O amigo não é o assassino, pois a vítima morreu depois das 23h.",
+            "A vitiama morreu antes das 14h.",
+            "O amigo é o principal suspeito, pois a vítima morreu pouco antes das 21h.",
+            "O amigo da vítima não é o assassino, pois não estava presente no momento do ocorrido."
+        ],
+        correct: "O amigo é o principal suspeito, pois a vítima morreu pouco antes das 21h.",
+    },
+
 
     
   

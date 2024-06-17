@@ -8,7 +8,6 @@ import { useFonts } from 'expo-font';
 
 const Home = ({ navigation }) => {
 
-  //Load Video Screen 
 
   const [videoLoaded, setVideoLoaded] = useState(false);
 
