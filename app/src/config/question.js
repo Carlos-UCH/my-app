@@ -65,7 +65,7 @@ export const reactQuestions = [
         question: "Pode-se afirmar que:",
         options: [
             "O amigo não é o assassino, pois a vítima morreu depois das 23h.",
-            "A vitiama morreu antes das 14h.",
+            "A vítima morreu antes das 14h.",
             "O amigo é o principal suspeito, pois a vítima morreu pouco antes das 21h.",
             "O amigo da vítima não é o assassino, pois não estava presente no momento do ocorrido."
         ],
